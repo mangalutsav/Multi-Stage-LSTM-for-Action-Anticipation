@@ -22,6 +22,7 @@ for early prediction by a relative increase in accuracy of 22.0% on JHMDB-21, 14
 
 ---
 #### Citation
+If you are using our code, please cite
 ```
 @inproceedings{aliakbarian2017encouraging,
   title={Encouraging lstms to anticipate actions very early},
@@ -30,5 +31,13 @@ for early prediction by a relative increase in accuracy of 22.0% on JHMDB-21, 14
   pages={280--289},
   year={2017}
 }
+
+@article{aliakbarian2016deep,
+  title={Deep action-and context-aware sequence learning for activity recognition and anticipation},
+  author={Aliakbarian, Mohammad Sadegh and Saleh, Fatemehsadat and Fernando, Basura and Salzmann, Mathieu and Petersson, Lars and Andersson, Lars},
+  journal={arXiv preprint arXiv:1611.05520},
+  year={2016}
+}
+
 
 ```
