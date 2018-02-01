@@ -38,6 +38,4 @@ If you are using our code, please cite
   journal={arXiv preprint arXiv:1611.05520},
   year={2016}
 }
-
-
 ```
