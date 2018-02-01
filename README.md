@@ -24,13 +24,13 @@ for early prediction by a relative increase in accuracy of 22.0% on JHMDB-21, 14
 #### Citation
 If you are using our code, please cite
 ```
-@inproceedings{aliakbarian2017encouraging,
-  title={Encouraging lstms to anticipate actions very early},
-  author={Aliakbarian, Mohammad Sadegh and Saleh, Fatemeh Sadat and Salzmann, Mathieu and Fernando, Basura and Petersson, Lars and Andersson, Lars},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={280--289},
-  year={2017}
-}
+@InProceedings{Aliakbarian_2017_ICCV,
+author = {Sadegh Aliakbarian, Mohammad and Sadat Saleh, Fatemeh and Salzmann, Mathieu and Fernando, Basura and Petersson, Lars and Andersson, Lars},
+title = {Encouraging LSTMs to Anticipate Actions Very Early},
+booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+month = {Oct},
+year = {2017}
+} 
 
 @article{aliakbarian2016deep,
   title={Deep action-and context-aware sequence learning for activity recognition and anticipation},
