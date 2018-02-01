@@ -6,7 +6,6 @@
 
 ---
 #### Authors
-<br/>
 Mohammad Sadegh Aliakbarian (ANU, ACRV, CSIRO)<br/>
 Fatemeh Sadat Saleh (ANU, CSIRO)<br/>
 Mathieu Salzmann (EPFL)<br/>
