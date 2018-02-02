@@ -32,14 +32,24 @@ python make_split.py --split-dir data/splits/ --data-dir data/frames/ --index 1 
 ##### Step 2: Train your action-aware/context-aware models.
 These models should be pre-trained on ImageNet. If it is the first time you are using this, it automatically download VGG-16 weights, pre-trained on ImageNet. For training context-aware model, please run
 ```
-CUDA_VISIBLE_DEVICES=1 python action_context_train.py --data-dir data/splitted_data/ --classes 21 --model_type context_aware --epochs 128 --save-model data/model_weights/context_best.h5 --save-best-only --fixed-width 224 --learning-rate 0.001 --batch-size 32
+CUDA_VISIBLE_DEVICES=0 python action_context_train.py --data-dir data/splitted_data/ --classes 21 --model_type context_aware --epochs 128 --save-model data/model_weights/context_best.h5 --save-best-only --fixed-width 224 --learning-rate 0.001 --batch-size 32
 ```
 For action-awre model, similarly, please run
 ```
-CUDA_VISIBLE_DEVICES=1 python action_context_train.py --data-dir data/splitted_data/ --classes 21 --model_type action_aware --epochs 128 --save-model data/model_weights/action_best.h5 --save-best-only --fixed-width 224 --learning-rate 0.001 --batch-size 32
+CUDA_VISIBLE_DEVICES=0 python action_context_train.py --data-dir data/splitted_data/ --classes 21 --model_type action_aware --epochs 128 --save-model data/model_weights/action_best.h5 --save-best-only --fixed-width 224 --learning-rate 0.001 --batch-size 32
 ```
 The models' weights are going to be saved in data/model_weights. Please note that after training, for each model, you will have a <model>_final.h5 and <model>_best.h5. For the rest of steps, if is recommended to use <model>_best.h5 for each model.
 
+
+##### Step 3: Feature extraction.
+Next step is to extract features from action-aware and context-aware models. To this end, please run
+```
+CUDA_VISIBLE_DEVICES=0 python context_aware_features.py --data-dir data/jhmdb_dataset/ --split-dir data/splits/ --classes 21 --model data/model_weights/context_best.h5 --temporal-length 50 --split 1 --output data/context_features/ --fixed-width 224
+```
+Similarly, for action-aware features, please run
+```
+CUDA_VISIBLE_DEVICES=0 python action_aware_features.py --data-dir data/jhmdb_dataset/ --split-dir data/splits/ --classes 21 --model data/model_weights/action_best.h5 --temporal-length 50 --split 1 --output data/action_features/ --fixed-width 224
+```
 
 ---
 #### Citation
