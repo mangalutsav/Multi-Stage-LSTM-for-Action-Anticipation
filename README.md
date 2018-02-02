@@ -51,6 +51,22 @@ Similarly, for action-aware features, please run
 CUDA_VISIBLE_DEVICES=0 python action_aware_features.py --data-dir data/jhmdb_dataset/ --split-dir data/splits/ --classes 21 --model data/model_weights/action_best.h5 --temporal-length 50 --split 1 --output data/action_features/ --fixed-width 224
 ```
 
+##### Step 4: Training MS-LSTM
+Given all features extracted from action-aware and context-aware model, you can train MS-LSTM model. To this end, please run
+```
+CUDA_VISIBLE_DEVICES=0 python ms_lstm.py --action-aware data/action_features/ --context-aware data/context_features/ --classes 21 --epochs 128 --save-model data/model_weights/mslstm_best.h5 --save-best-only --learning-rate 0.0001 --batch-size 32 --temporal-length 50 --cell 2048 --loss crossentropy
+```
+For better performance, if GPU memory lets you, try cell 4096. You can also try other losses from:
+'crossentropy', 'hinge', 'totally_linear', 'partially_linear', 'exponential'
+
+
+##### Step 5: Evaluation
+You can evaluate the performance of the model,  with and without using Temporal Average Pooling. To this end, please run
+```
+CUDA_VISIBLE_DEVICES=0 python ms_lstm.py --action-aware data/action_features/ --context-aware data/context_features/ --classes 21 --temporal-length 50 --cell 2048
+```
+
+
 ---
 #### Citation
 If you are using our code, please cite
