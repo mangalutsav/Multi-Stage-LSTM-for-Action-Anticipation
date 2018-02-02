@@ -1,6 +1,6 @@
 # Multi Stage LSTM (MS-LSTM) for Action Anticipation
 
-#### Implementation of "Encoraging LSTMs to Anticipate Actions Very Early", ICCV 2017 <br/>
+## Implementation of "Encoraging LSTMs to Anticipate Actions Very Early", ICCV 2017 <br/>
 [Encouraging LSTMs To Anticipation Actions Very Early, ICCV 2017](http://openaccess.thecvf.com/content_ICCV_2017/papers/Aliakbarian_Encouraging_LSTMs_to_ICCV_2017_paper.pdf)
 
 ---
@@ -12,7 +12,7 @@ for early prediction by a relative increase in accuracy of 22.0% on JHMDB-21, 14
 
 ---
 
-#### Usage
+## Usage
 There are a couple of steps involved to run the full model. Later, will will update this and prepare a run.py that covers all of these steps.
 
 ##### Step 0: Preparing data/dataset
@@ -68,7 +68,7 @@ CUDA_VISIBLE_DEVICES=0 python ms_lstm.py --action-aware data/action_features/ --
 
 
 ---
-#### Citation
+## Citation
 If you are using our code, please cite
 ```
 @InProceedings{Aliakbarian_2017_ICCV,
@@ -89,5 +89,5 @@ year = {2017}
 
 
 ---
-#### Contact
+## Contact
 For any question, bug report, and etc., please contact Sadegh Aliakbarian (PhD Student at Australian National Unviersity, Researcher at CSIRO and ACRV), mohammadsadegh.aliakbarian@data61.csiro.au 
