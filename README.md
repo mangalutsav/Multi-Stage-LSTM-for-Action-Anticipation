@@ -41,6 +41,7 @@ CUDA_VISIBLE_DEVICES=1 python action_context_train.py --data-dir data/splitted_d
 The models' weights are going to be saved in data/model_weights. Please note that after training, for each model, you will have a <model>_final.h5 and <model>_best.h5. For the rest of steps, if is recommended to use <model>_best.h5 for each model.
 
 
+---
 #### Citation
 If you are using our code, please cite
 ```
