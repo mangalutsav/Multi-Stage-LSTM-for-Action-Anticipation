@@ -21,12 +21,12 @@ Please put all video folders of your dataset (code prepared for jhmdb-21) into d
 ##### Step 1: Converting videos to frames in a splitted format
 To convert videos into frame, please run
 ```
-python mkframes.py --input-dir data/jhmdb_dataset/ --output-dir data/frames/ --format png
+python mkframes.py --input-dir path/to/data/jhmdb_dataset/ --output-dir path/to/data/frames/ --format png
 ```
 
 And, to prepare them for training convNets (put it into train/val splits so that a generator can have access to them), please run
 ```
-python make_split.py --split-dir data/splits/ --data-dir data/frames/ --index 1 --output-dir data/splitted_data/
+python make_split.py --split-dir path/to/data/splits/ --data-dir path/to/data/frames/ --index 1 --output-dir path/to/data/splitted_data/
 ```
 
 ##### Step 2: Train your action-aware/context-aware models.
