@@ -20,24 +20,24 @@ Please put all video folders of your dataset (code prepared for jhmdb-21) into d
 
 ##### Step 1: Converting videos to frames in a splitted format
 To convert videos into frame, please run
-'''
+```
 python mkframes.py --input-dir data/jhmdb_dataset/ --output-dir data/frames/ --format png
-'''
+```
 
 And, to prepare them for training convNets (put it into train/val splits so that a generator can have access to them), please run
-'''
+```
 python make_split.py --split-dir data/splits/ --data-dir data/frames/ --index 1 --output-dir data/splitted_data/
-'''
+```
 
 ##### Step 2: Train your action-aware/context-aware models.
 These models should be pre-trained on ImageNet. If it is the first time you are using this, it automatically download VGG-16 weights, pre-trained on ImageNet. For training context-aware model, please run
-'''
+```
 CUDA_VISIBLE_DEVICES=1 python action_context_train.py --data-dir data/splitted_data/ --classes 21 --model_type context_aware --epochs 128 --save-model data/model_weights/context_best.h5 --save-best-only --fixed-width 224 --learning-rate 0.001 --batch-size 32
-'''
+```
 For action-awre model, similarly, please run
-'''
+```
 CUDA_VISIBLE_DEVICES=1 python action_context_train.py --data-dir data/splitted_data/ --classes 21 --model_type action_aware --epochs 128 --save-model data/model_weights/action_best.h5 --save-best-only --fixed-width 224 --learning-rate 0.001 --batch-size 32
-'''
+```
 The models' weights are going to be saved in data/model_weights. Please note that after training, for each model, you will have a <model>_final.h5 and <model>_best.h5. For the rest of steps, if is recommended to use <model>_best.h5 for each model.
 
 
