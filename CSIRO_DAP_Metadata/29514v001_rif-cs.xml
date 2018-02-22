@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registryObjects xmlns="http://ands.org.au/standards/rif-cs/registryObjects" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ands.org.au/standards/rif-cs/registryObjects http://services.ands.org.au/home/orca/schemata/registryObjects.xsd">
+  <registryObject group="Commonwealth Scientific and Industrial Research Organisation">
+    <key>102.100.100/62874</key>
+    <originatingSource>https://data.csiro.au/dap/</originatingSource>
+    <collection type="software" dateAccessioned="2018-02-22T11:25:18+11:00">
+      <identifier type="local">102.100.100/62874</identifier>
+      <identifier type="doi">10.4225/08/5a8e0911ae52e</identifier>
+      <name type="primary">
+        <namePart>Multi-Stage LSTM (MS-LSTM) for Action Anticipation</namePart>
+      </name>
+      <location>
+        <address>
+          <electronic type="url">
+            <value>http://hdl.handle.net/102.100.100/62874?index=1</value>
+          </electronic>
+        </address>
+      </location>
+      <citationInfo>
+        <citationMetadata>
+          <identifier type="doi">10.4225/08/5a8e0911ae52e</identifier>
+          <title>Multi-Stage LSTM (MS-LSTM) for Action Anticipation</title>
+          <version>v1</version>
+          <publisher>Commonwealth Scientific and Industrial Research Organisation (CSIRO)</publisher>
+          <contributor seq="1">
+            <namePart type="family">Aliakbarian</namePart>
+            <namePart type="given">Mohammad Sadegh</namePart>
+          </contributor>
+          <contributor seq="2">
+            <namePart type="family">Saleh</namePart>
+            <namePart type="given">Fatemeh Sadat</namePart>
+          </contributor>
+          <contributor seq="3">
+            <namePart type="family">Salzmann</namePart>
+            <namePart type="given">Mathieu</namePart>
+          </contributor>
+          <contributor seq="4">
+            <namePart type="family">Fernando</namePart>
+            <namePart type="given">Basura</namePart>
+          </contributor>
+          <contributor seq="5">
+            <namePart type="family">Petersson</namePart>
+            <namePart type="given">Lars</namePart>
+          </contributor>
+          <contributor seq="6">
+            <namePart type="family">Andersson</namePart>
+            <namePart type="given">Lars</namePart>
+          </contributor>
+          <date type="publicationDate">2018-02-22</date>
+        </citationMetadata>
+      </citationInfo>
+      <relatedObject>
+        <key>csiro:PartyGroup</key>
+        <relation type="isManagedBy" />
+      </relatedObject>
+      <subject type="local">Action Anticipation, Deep Learning, Long Short-Term Memory, Computer Vision</subject>
+      <subject type="anzsrc-for">170203</subject>
+      <subject type="anzsrc-for">080104</subject>
+      <description type="brief">Multi-Stage LSTM (MS-LSTM) is a deep sequence learning architecture that leverage two types of descriptors, i.e., action-aware and context-aware features to determine the action label. To do it at early stages, MS-LSTM is trained with a novel loss function that encourages correct prediction as early as possible.</description>
+      <description type="lineage">Source code accompanying the publication of a conference paper at the 2017 International Conference on Computer Vision</description>
+      <relatedInfo type="publication">
+        <identifier type="uri">http://openaccess.thecvf.com/content_ICCV_2017/papers/Aliakbarian_Encouraging_LSTMs_to_ICCV_2017_paper.pdf</identifier>
+        <title>Encouraging LSTMs To Anticipate Actions Very Early</title>
+        <notes>Link to the publication</notes>
+      </relatedInfo>
+      <rights>
+        <rightsStatement>All Rights (including copyright) CSIRO 2018.</rightsStatement>
+        <licence type="GPL" rightsUri="https://wiki.csiro.au/display/dmsdoc/GPLv3+Licence+with+CSIRO+Disclaimer">GPLv3 Licence with CSIRO Disclaimer</licence>
+        <accessRights type="open">Data is accessible online and may be reused in accordance with licence conditions</accessRights>
+      </rights>
+    </collection>
+  </registryObject>
+</registryObjects>
+
