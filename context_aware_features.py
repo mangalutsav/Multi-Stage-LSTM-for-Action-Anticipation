@@ -40,13 +40,13 @@ parser.add_argument(
     "--temporal-length",
     default=50,
     type=int,
-    elp="number of frames representing each video")
+    help="number of frames representing each video")
 
 parser.add_argument(
     "--split",
     default='1',
     type=str,
-    elp="the split")
+    help="the split")
 
 parser.add_argument(
     "--output",
