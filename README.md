@@ -48,7 +48,7 @@ CUDA_VISIBLE_DEVICES=0 python context_aware_features.py --data-dir data/jhmdb_da
 ```
 Similarly, for action-aware features, please run
 ```
-CUDA_VISIBLE_DEVICES=0 python action_aware_features.py --data-dir data/jhmdb_dataset/ --split-dir data/splits/ --classes 21 --model data/model_weights/action_best.h5 --temporal-length 50 --split 1 --output data/action_features/ --fixed-width 224
+CUDA_VISIBLE_DEVICES=0 python action_aware_features.py --data-dir data/jhmdb_dataset/ --split-dir data/splits/ --classes 21 --model-action data/model_weights/action_best.h5 -- model-context data/model_weights/context_best.h5 --temporal-length 50 --split 1 --output data/action_features/ --fixed-width 224
 ```
 
 ##### Step 4: Training MS-LSTM
