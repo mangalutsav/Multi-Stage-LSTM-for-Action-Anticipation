@@ -20,14 +20,14 @@ class CustomDataGenerator(object):
 
         self.features_action = glob.glob(self.data_path_action + '/feature_*.npy')
         self.features_action.sort()
-
-        self.data_path_context = glob.glob(self.data_path_context + '/feature_*.npy')
-        self.data_path_context.sort()
+        print(self.data_path_context)
+        self.features_context = glob.glob(self.data_path_context + '/feature_*.npy')
+        self.features_context.sort()
 
         self.labels = glob.glob(self.data_path_context + '/label_*.npy')
         self.labels.sort()
 
-        self.pairs = zip(self.data_path_context, self.features_action, self.labels)
+        self.pairs = zip(self.features_context, self.features_action, self.labels)
         shuffle(self.pairs)
 
         self.data_size = len(self.pairs)
